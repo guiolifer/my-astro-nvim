@@ -9,6 +9,14 @@ return {
   -- { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
+
+  { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
+  { import = "astrocommunity.terminal-integration.vim-tpipeline" },
+  { import = "astrocommunity.editing-support.yanky-nvim" },
+  { import = "astrocommunity.editing-support.vim-move" },
+  { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
+  { import = "astrocommunity.debugging.telescope-dap-nvim" },
 
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript" },
@@ -23,6 +31,13 @@ return {
     opts = {
       settings = {
         java = {
+          format = {
+            enabled = true,
+            settings = {
+              -- url = vim.fn.expand "$MASON/lang_servers/intellij-java-google-style.xml",
+              profile = "GoogleStyle",
+            },
+          },
           configuration = {
             runtimes = {
               {

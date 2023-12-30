@@ -33,7 +33,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -49,6 +49,10 @@ return {
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
+      setup_handlers = {
+        -- add custom handler
+        tsserver = function(_, opts) require("typescript").setup { server = opts } end
+      }
     },
     -- enable servers that you already have installed without mason
     servers = {
@@ -63,6 +67,15 @@ return {
       rtp = {
         -- customize default disabled vim plugins
         disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+      },
+    },
+  },
+  plugins = {
+    "jose-elias-alvarez/typescript.nvim", -- add lsp plugin
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = {
+        ensure_installed = { "tsserver" }, -- automatically install lsp
       },
     },
   },
