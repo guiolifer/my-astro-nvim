@@ -9,6 +9,8 @@ return {
   -- { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
+  { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
 
   { import = "astrocommunity.terminal-integration.vim-tmux-yank" },

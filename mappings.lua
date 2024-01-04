@@ -30,6 +30,13 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<C-a>"] = { function() require("harpoon.mark").add_file() end, desc = "Harpoon mark" },
+    -- ["<C-1>"] = { function() require("harpoon.term").gotoTerminal(1) end, desc = "Harpoon go 1" },
+    -- ["<C-2>"] = { function() require("harpoon.term").gotoTerminal(2) end, desc = "Harpoon go 2" },
+    -- ["<C-3>"] = { function() require("harpoon.term").gotoTerminal(2) end, desc = "Harpoon go 3" },
+    -- ["<C-4>"] = { function() require("harpoon.term").gotoTerminal(2) end, desc = "Harpoon go 4" },
+    -- ["<C-5>"] = { function() require("harpoon.term").gotoTerminal(2) end, desc = "Harpoon go 5" },
+    -- ["<C-6>"] = { function() require("harpoon.term").gotoTerminal(2) end, desc = "Harpoon go 6" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

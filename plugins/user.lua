@@ -22,4 +22,7 @@ return {
     event = "User AstroFile",
     cmd = { "TodoQuickFix" },
   },
+  {
+    "christoomey/vim-tmux-navigator"
+  }
 }
