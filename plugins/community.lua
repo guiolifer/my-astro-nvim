@@ -26,6 +26,7 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.rust" },
 
   { import = "astrocommunity.pack.java" },
   {
